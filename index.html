@@ -3,7 +3,10 @@
 <head>
     <title>My Business Website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -11,28 +14,83 @@
 
     <!-- Navigation Bar -->
     <nav>
-        <h2 class="logo">Dua Virtual School</h2>
+        <h2 class="logo">
+
+            <a href="#">
+                <img src="images/DuaSecondary Logo.png" alt="Dua Virtual School Logo">
+            </a>
+        </h2>
+        
         <ul>
+            <li class="hideOnMobile"><a href="#home">Home</a></li>
+            <li class="hideOnMobile"><a href="#about">About</a></li>
+            <li class="hideOnMobile"><a href="#services">Fees</a></li>
+            <li class="hideOnMobile"><a href="#contact">Co-Curricular</a></li>
+            <li class="hideOnMobile"><a href="#contact">Contact</a></li>
+            <li class="hideOnMobile"> <a href="#services" class="btn">Get Started</a></li>
+            <li class="menu-button"><a onclick="showSidebar()">
+                <img src="images/menu_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="Dua Virtual School Logo">
+            </a></li>
+        </ul>
+
+       
+
+        <ul class="sidebar">
+            <li><a onclick="hideSidebar()">
+                <img src="images/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="Dua Virtual School Logo">
+            </a></li>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="#services">Fees</a></li>
+            <li><a href="#contact">Co-Curricular</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="#services" class="btn">Get Started</a></li>
         </ul>
+
+        
+
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
         <h1>Welcome to Dua Virtual School</h1>
         <p>A leading international virtual school based in Kenya offering the British International Curriculum globally.</p>
+    
+            <div class="hero-buttons">
+                <a href="#services" class="btn">Get Started</a>
+                <a href="#contact" class="btn btn-secondary">Contact Us</a>
+            </div> 
     </section>
+
+
+    
 
     <!-- About Section -->
     <section class="about"id="about">
-        <h2>About Us</h2>
-        <p>
-            We are a business dedicated to providing high-quality services
-            tailored to our clients’ needs.
-        </p>
+       <h2>What Does Dua Virtual School offer?</h2>
+            <p>
+                We are a business dedicated to providing high-quality services
+                tailored to our clients’ needs.
+            </p>
+            
+        <div class="container">
+                
+                <div class="feature">
+                    <h3>Feature One</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ut velit sit amet sapien.</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>Feature Two</h3>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui.</p>
+                </div>
+                
+                <div class="feature">
+                    <h3>Feature Three</h3>
+                    <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Sed posuere consectetur.</p>
+                </div>
+        </div>
+        
     </section>
 
     <!-- Services Section -->

@@ -1,19 +1,31 @@
+* {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    min-height:100vh;
     background-color: #ffffff;
-;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
     color: #1a1a1a;
     text-align: center;
 }
 
 h1 {
     margin-top: 100px;
-    font-size: 39px;
+    font-size: 200px;
+    font-weight: bolder;
 }
 
 h2 {
     margin-bottom: 20px;
+    font-size: 39px;
+    font-weight: 600;
 }
 
 p {
@@ -21,13 +33,38 @@ p {
     line-height: 1.6;
 }
 
+
 nav {
-    background-color: #0f172a;
-    color: white;
+    background-color: #f7f0e4;
+    color: #000;
     padding: 15px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    top:0;
+    position:fixed;
+    width:100%;
+    z-index: 1000;
+}
+
+nav .btn{
+    padding:9px 25px;
+    background-color:;
+    border:none;
+    border-radius:32px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #ff8901;
+    transition: background-color 0.3s;
+
+}
+
+nav .btn:hover {
+    background-color: #005a5a;
+    color:#f7f0e4;
+    text-decoration: none;
 }
 
 nav ul {
@@ -37,31 +74,103 @@ nav ul {
 }
 
 nav a {
-    color: white;
+    font-size: 14px;
+    color: #000;
     text-decoration: none;
     font-weight: bold;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color:#4e8b8b;
 }
 
 .logo {
     margin: 0;
+    display: flex;
 }
+
+.logo img {
+    height: 54px;
+    width: auto;
+}
+
+.sidebar{
+position: fixed;
+top:0;
+right:0;
+height:100vh;
+width:250px;
+z-index:999;
+background-color: #f7f0e488;
+box-shadow:-10px 0 10px rgba(0,0,0,0.1); 
+display: none;
+flex-direction:column;
+align-items:flex-start;
+justify-content:flex-start;
+padding: 16px;
+backdrop-filter: blur(10px);
+}
+
+
 
 section {
     padding: 80px 40px;
 }
 
 .hero {
-    background-color: #e5e7eb;
+    background-color: #4e8b8b;
     text-align: center;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 72px;
+    font-weight:bolder;
+    line-height: 1.6px;
+    color: #fff;
 }
+
+.hero p{
+    margin:54px;
+    font-size: 18px;
+    color: #fff;
+    
+}
+
+.hero-buttons {
+    display: flex;              /* Flexbox for horizontal layout */
+    justify-content: center;    /* Center buttons horizontally */
+    gap: 20px;                  /* Space between buttons */
+    margin-top: 32px;           /* Space from text above */
+}
+
+.hero-buttons .btn {
+    padding: 16px 54px;
+    font-size: 1rem;
+    border-radius: 32px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #ff8901;
+    transition: background-color 0.3s;
+}
+
+.hero-buttons .btn:hover {
+    background-color: #ffc481; /* Darker on hover */
+}
+
+.hero-buttons .btn-secondary {
+    background-color: #f7f0e4; /* Gray secondary button */
+    color:#005a5a;
+}
+
+.hero-buttons .btn-secondary:hover {
+    background-color: #ff8901; /* Darker gray hover */
+}
+
 
 .about, .services, .contact {
     max-width: 800px;
@@ -101,6 +210,30 @@ button:hover {
     background-color: #1e293b;
 }
 
+
+.container {
+    display:flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.container h3{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.container p{
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+}
+    
+.menu-button{
+    display:none;
+}
+
+
 @media (max-width: 768px) {
 
     nav {
@@ -121,12 +254,39 @@ button:hover {
     section {
         padding: 60px 20px;
     }
+
+    
 }
+
+@media (max-width: 600px) {
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width:800px){
+    .hideOnMobile{
+        display:none;
+    }
+    .menu-button{
+        display:block;
+    }
+}
+
+
+@media (max-width: 400px){
+    .sidebar{
+        width:100%;
+    }
+}
+
 
 footer {
     background-color: #0f172a;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     margin-top: 60px;
+    font: 5px;
 }

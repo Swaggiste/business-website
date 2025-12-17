@@ -29,3 +29,13 @@ document.getElementById("contactForm").addEventListener("submit", function(e){
         messageElem.style.display = "block";
     });
 });
+
+function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display= 'flex' 
+}
+
+function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display= 'none' 
+}
